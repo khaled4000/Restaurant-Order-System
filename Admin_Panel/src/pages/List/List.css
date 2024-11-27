@@ -1,0 +1,51 @@
+
+
+.list {
+  font-family: Arial, sans-serif;
+  max-width: 120%; 
+  margin: 0 auto; 
+}
+
+.list p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color:rgb(8, 8, 8); 
+  margin-bottom: 1rem;
+}
+
+.list-table {
+  overflow-x: auto;
+}
+
+.list-table table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.list-table th,
+.list-table td {
+  padding: 22px;
+  text-align: left;
+}
+
+.list-table th {
+  background-color: orangered;
+  color: #333;
+}
+
+.list-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.list-table tbody tr:hover {
+  background-color:rgb(236, 225, 221);
+  
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.cursor:hover {
+  color: rgb(3, 3, 3);
+}

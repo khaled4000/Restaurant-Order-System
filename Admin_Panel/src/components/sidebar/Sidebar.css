@@ -1,0 +1,61 @@
+.sidebar{
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid #a9a9a9;
+    border-top: 0;
+    font-size: max(1vw,10px);
+}
+
+.sidebar-options{
+    padding-top: 30px;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.sidebar-option{
+    display: flex;
+    align-items: center;
+    gap: 12x;
+    border: 1px solid #a9a9a9;
+    border-right: 0;
+    padding: 4px 10px;
+    border-radius: 3px  0px 0px 3px;
+    cursor: pointer;
+    /* white-space: 1px; */
+}
+.sidebar-option.active{
+    /* when i click a button of 3 btsir active */
+    background-color: orangered;
+   border-color: rgb(255, 255, 255);
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #4CAF50;
+    color: #000000;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover{
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+}
+
+@media(max-width:900px){
+    .sidebar-option p{
+        display: none;  
+        /* remove p tag  phone size */
+    }
+}
+

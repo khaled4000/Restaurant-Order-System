@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-test
+    container_name: ai-test-backend
+    ports:
+      - 3000:8000
+    volumes:
+      - ./app.py:/app/app.py
+    networks:
+      - aiTest
+
+networks:
+  aiTest:
+    external: true

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+.about-section {
+    padding: 2rem 9%;
+}
+
+.about-section * {
+    box-sizing: border-box;
+}
+
+
+.about-section .about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-section .about-content img {
+    width: 100%;
+    max-width: 250px; 
+    border-radius: 10px; 
+    margin-right: 2rem;
+}
+
+.about-section .about-content .about-content-text {
+    font-size: 16px;
+}
+
+
+.about-section .about-article {
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 13px;
+    text-align: center;
+    background-color: #ff7809;
+}
+
+.about-section .about-article h3 {
+    font-family: 'Satisfy', cursive;
+    font-size: 28px;
+    color: white;
+    margin: 0;
+}
+
+
+.about-section .gallery {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-section .gallery .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-gap: 20px;
+}
+
+.about-section .gallery .wrapper img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease; 
+}
+
+.about-section .gallery .wrapper img:hover {
+    transform: scale(0.8); 
+}
+
+
+.ptext{
+    font-size: 20px;
+    
+}
+
+.ab{
+    font-size: 50px;
+}

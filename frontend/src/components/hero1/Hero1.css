@@ -1,0 +1,74 @@
+.home-category {
+    display: flex; 
+    gap: 1.5rem;
+    padding-bottom: 5rem;
+    /* overflow-x: auto;  */
+}
+
+.home-category .box {
+   
+    padding: 0.9rem;
+    text-align: center;
+    border-radius: 8px;
+    background: #fafafa;
+    height: 140px;
+    width: 200px;
+}
+
+.home-category .box:hover {
+    background: rgb(255, 110, 58);
+    animation: fadeIn 0.6s;
+    transform : scale(1.2);
+    transition: transform 0.1s ease;
+}
+
+.home-category .box:hover h3 {
+    color: #fff;
+}
+
+.home-category .box img {
+    height: 7rem;
+    width: auto;
+}
+
+.home-category .box h3 {
+    font-size: 1.2rem;
+    color: #130f40;
+}
+
+.home-category .box img {
+    height: 5rem; /* Decrease the height for smaller images */
+    width: auto; /* Maintain aspect ratio */
+}
+
+
+.lab{
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background-color:rgb(255, 96, 39) ;
+    border-radius: 20px;
+     font-family: 'Satisfy', cursive;
+     font-size: 32px;
+}
+.lab h3 {
+    font-family: 'Satisfy', cursive;
+   
+    color: white;
+    margin: 0;
+}
+
+
+.banner {
+    margin-top: 25px;
+    padding: 10px;
+    text-align: center;
+    background-color:rgb(255, 96, 39) ;
+    border-radius: 13px;
+     font-family: Arial, sans-serif;
+     font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+   
+    color: rgb(255, 255, 255);
+    margin: 0;
+}

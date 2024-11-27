@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Images</title>
+</head>
+<body>
+  <!--  images form -->
+  <form id="upload-form">
+    <input type="file" name="image" id="image" accept="image/*">
+    <button type="button" onclick="createImage()">Upload</button>
+  </form>
+
+  <script>
+    const imageEndPoint = 'http://127.0.0.1:8000/food/addFood/';
+    const imageInput = document.querySelector('#image');
+
+    const createImage = async () => {
+      const imageFile = imageInput.files[0];
+
+      const formData = new FormData();
+      formData.append('food_src', imageFile);
+      formData.append('food_name', 'ooo');
+      formData.append('food_star', '4.5');
+      formData.append('food_vote', '100');
+      formData.append('food_price', '10.99');
+      formData.append('food_discount', '0.5');
+      formData.append('food_description', 'This is a dummy food description.');
+      formData.append('food_status', 'available');
+      formData.append('food_type', 'appetizer');
+      formData.append('food_category', 'Dummy Category');
+
+      try {
+        const response = await fetch(imageEndPoint, {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE1MzM2NTcxLCJpYXQiOjE3MTUyNTAxNzEsImp0aSI6IjBhYzk5ZjU3ODlmMDRiMTZhZDNiZTk1OGY5MThjOGU4IiwidXNlcl9pZCI6MX0.9PGy5Sqj0orOxoe8R-cAad_LHYrFEW2ET-43SaKv9H4'
+          },
+          body: formData
+        });
+
+        if (response.ok) {
+          const newImage = await response.json();
+          alert('Image uploaded successfully!');
+        } else {
+          alert('Error uploading image. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error creating image:', error);
+        alert('Error creating image. Please try again.');
+      }
+    };
+  </script>
+</body>
+</html>
